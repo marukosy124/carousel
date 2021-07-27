@@ -1,5 +1,10 @@
-import React, { useEffect, useState, useRef } from "react";
-import "./carousel.css";
+import React, { useEffect, useState, useRef } from 'react';
+import './carousel.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faChevronLeft,
+  faChevronRight,
+} from '@fortawesome/free-solid-svg-icons';
 
 const Carousel = (props) => {
   const { children, show } = props;
@@ -10,9 +15,6 @@ const Carousel = (props) => {
   const [length, setLength] = useState(children.length);
 
   const [touchPosition, setTouchPosition] = useState(null);
-  const [isMouseDown, setIsMouseDown] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
 
   // Set the length to match current children from props
   useEffect(() => {
@@ -57,27 +59,12 @@ const Carousel = (props) => {
     setTouchPosition(null);
   };
 
-  const handleMouseDown = (e) => {
-    setIsMouseDown(true);
-    setStartX(e.pageX - sliderRef.current.offsetLeft);
-    setScrollLeft(sliderRef.current.scrollLeft);
-  };
-
-  const handleMouseMove = (e) => {
-    if (!isMouseDown) return;
-    e.preventDefault();
-    const x = e.pageX - sliderRef.current.offsetLeft;
-    const walk = (x - startX) * 3; //scroll-fast
-    sliderRef.current.scrollLeft = scrollLeft - walk;
-  };
-
   return (
     <div className="carousel-container">
       <div className="carousel-wrapper">
-        {/* You can alwas change the content of the button to other things */}
         {currentIndex > 0 && (
-          <button onClick={prev} className="left-arrow">
-            &lt;
+          <button className="arrow-button left-arrow" onClick={prev}>
+            <FontAwesomeIcon icon={faChevronLeft} />
           </button>
         )}
         <div
@@ -85,10 +72,6 @@ const Carousel = (props) => {
           ref={sliderRef}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
-          onMouseDown={handleMouseDown}
-          onMouseLeave={() => setIsMouseDown(false)}
-          onMouseUp={() => setIsMouseDown(false)}
-          onMouseMove={handleMouseMove}
         >
           <div
             className={`carousel-content show-${show}`}
@@ -99,10 +82,9 @@ const Carousel = (props) => {
             {children}
           </div>
         </div>
-        {/* You can alwas change the content of the button to other things */}
         {currentIndex < length - show && (
-          <button onClick={next} className="right-arrow">
-            &gt;
+          <button className="arrow-button right-arrow" onClick={next}>
+            <FontAwesomeIcon icon={faChevronRight} />
           </button>
         )}
       </div>
