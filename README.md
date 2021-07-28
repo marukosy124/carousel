@@ -1,10 +1,10 @@
-## Abstract
+# About
 
 A carousel component forked and modified from https://dev.to/rakumairu/simple-react-carousel-24m0.
 
 Implemented using React.
 
-## Demo
+# Demo
 ### Desktop version (click arrow buttons to browse)
 <img src="https://github.com/marukosy124/carousel/blob/main/carousel_demo_desktop.gif">
 
@@ -15,7 +15,7 @@ Implemented using React.
 - [x] support any type of content for the items, not limited to images
 - [x] support single and multiple (up to 4) items to show at once
 
-## Setup
+# Setup
 
 ### `npm install`
 Install the dependencies.
