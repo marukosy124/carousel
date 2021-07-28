@@ -6,10 +6,10 @@ Implemented using React.
 
 ## Demo
 ### Desktop version (click arrow buttons to browse)
-<img src="https://github.com/marukosy124/carousel-example/blob/main/carousel_demo_desktop.gif">
+<img src="https://github.com/marukosy124/carousel/blob/main/carousel_demo_desktop.gif">
 
 ### Mobile version (swipe to browse)
-<img src="https://github.com/marukosy124/carousel-example/blob/main/carousel_demo_mobile.gif" height="500">
+<img src="https://github.com/marukosy124/carousel/blob/main/carousel_demo_mobile.gif" height="500">
 
 ### Both: 
 - [x] support any type of content for the items, not limited to images
