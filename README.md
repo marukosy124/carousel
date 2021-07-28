@@ -5,14 +5,13 @@ A carousel component forked and modified from https://dev.to/rakumairu/simple-re
 Implemented using React.
 
 ## Demo
-### Desktop version
-<img src="https://github.com/marukosy124/carousel-example/blob/master/carousel_demo_desktop.gif">
+### Desktop version (click arrow buttons to browse)
+<img src="https://github.com/marukosy124/carousel-example/blob/main/carousel_demo_desktop.gif">
 
-### Mobile version
-<img src="https://github.com/marukosy124/carousel-example/blob/master/carousel_demo_mobile.gif">
+### Mobile version (swipe to browse)
+<img src="https://github.com/marukosy124/carousel-example/blob/main/carousel_demo_mobile.gif" height="500">
 
-- [x] click arrow buttons to browse
-- [x] swipe to browse
+### Both: 
 - [x] support any type of content for the items, not limited to images
 - [x] support single and multiple (up to 4) items to show at once
 
