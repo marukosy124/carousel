@@ -2,26 +2,22 @@ import React, { useState } from 'react';
 import Carousel from './components/Carousel/Carousel';
 import './app.css';
 
-const renderImages = () => {
-  const images = [];
-  for (let i = 0; i < 8; i++) {
-    images.push(
-      <div key={i}>
-        <div style={{ padding: 8 }}>
-          <img
-            src="https://via.placeholder.com/500x300"
-            alt="placeholder"
-            style={{ width: '100%' }}
-          />
-        </div>
-      </div>
-    );
-  }
-  return images;
-};
-
 const App = () => {
   const [itemsToShow, setItemsToShow] = useState(2);
+
+  const renderImages = () => {
+    const images = [];
+    for (let i = 0; i < 8; i++) {
+      images.push(
+        <div key={i}>
+          <div className="img-container">
+            <img src="https://via.placeholder.com/500x300" alt="placeholder" />
+          </div>
+        </div>
+      );
+    }
+    return images;
+  };
 
   const renderRadioButtonss = () => {
     const radioButtons = [];
